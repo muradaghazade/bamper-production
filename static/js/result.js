@@ -7,7 +7,7 @@ if (vin=="") {
         <img class="error-img" src="/static/images/404.jpg" alt="">
         
     </div>
-    <h1 class="error-text">Axtardınız VIN üzrə nəticə tapılmadı</h1>
+    <h1 class="error-text">Axtardığnız VIN üzrə nəticə tapılmadı</h1>
 </header>
     `
 }

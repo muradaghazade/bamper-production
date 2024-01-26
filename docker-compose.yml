@@ -1,19 +1,11 @@
-version: "3.3"
-   
-services:
-    django:
+version: '3'
+services: 
+    web:
         build: .
         restart: "always"
-        container_name: django
+        ports:
+            - "80:8000"
         command: python manage.py runserver 0.0.0.0:8000
         volumes:
-            - .:/usr/src/app/
-            - ./static/:/code/static
-            - ./media/:/code/media
-        ports:
-            - "8000:8000"
-        environment:
-            - DEBUG=1
-            - DJANGO_ALLOWED_HOSTS= bamper.site www.bamper.az www.bamper.site bamper.az 34.16.158.134 [::1]
-        env_file: ./.env
-    
+            - .:/code/
+            - ./media/:/code/media/

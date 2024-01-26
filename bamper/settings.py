@@ -55,7 +55,11 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'accounts.apps.AccountsConfig',
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://bamper.site/',
+    'bamper.site',
+    'www.bamper.site'
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

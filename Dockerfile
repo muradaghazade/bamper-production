@@ -1,7 +1,9 @@
-FROM python:3
-ENV PYTHONUNBUFFERED=1
-WORKDIR /usr/src/app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+FROM python:3.7
 
-CMD [ "gunicorn", "--bind", "0.0.0.0", "-p", "8000",  "innovation.wsgi" ]
+ENV PYTHONUNBUFFERED 1
+
+
+COPY requirements.txt /code/requirements.txt
+WORKDIR /code
+RUN pip install -r requirements.txt
+ADD . .

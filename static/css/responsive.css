@@ -1,4 +1,7 @@
 @media (min-width: 360px) and (max-width: 767px) {
+    .header_search_input input {
+        width: 300px;
+    }
     .part-input {
        margin-bottom: 20px; 
     }

@@ -50,15 +50,12 @@
       <img class="store-image" style="width: 120px; height: 120px;" src="{{ store.image.url }}" alt="">
       <div class="store-info">
         <div class="store-name">{{ store.title }}</div>
-        <div class="phone-number">
-          <img class="tel-img" src="{% static 'images/tel.png' %}"> {{ store.phone }}
-        </div>
-        <div class="views">
+        <!-- <div class="views">
           <a style="display: flex; justify-content: inherit; align-items: flex-end;" href="{{ store.sm_url }}">
             <img style="margin-right: 5px;" class="views-img" src="https://www.iconpacks.net/icons/2/free-instagram-logo-icon-3497-thumb.png">  {{ store.title }}
 
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     {% endfor %}

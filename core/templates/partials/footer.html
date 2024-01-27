@@ -58,19 +58,19 @@
       
                 <ul  class="list-unstyled ;mb-0">
                   <li>
-                    <a href="./index.html#header_main_text" class="text">VIN Kod</a>
+                    <a href="{% url 'core:home' %}#header_main_text" class="text">VIN Kod</a>
                   </li>
                   <li>
-                    <a href="./index.html#title" class="text">İnformasiya</a>
+                    <a href="{% url 'core:home' %}#title" class="text">İnformasiya</a>
                   </li>
                   <li>
-                    <a href="./index.html#title2" class="text">İşlətmə qaydası</a>
+                    <a href="{% url 'core:home' %}#title2" class="text">İşlətmə qaydası</a>
                   </li>
                   <li>
-                    <a href="./index.html#title3" class="text">Mağaza yarat</a>
+                    <a href="{% url 'core:home' %}#title3" class="text">Mağaza yarat</a>
                   </li>
                   <li>
-                    <a href="./index.html#title4" class="text">Bizimlə əlaqə</a>
+                    <a href="{% url 'core:home' %}#title4" class="text">Bizimlə əlaqə</a>
                   </li>
       
                   
@@ -84,10 +84,10 @@
       
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="../autopart-magazine-list-main/autopart-magazine-list.html#mainText" class="text">Mağazalar səhifələri</a>
+                    <a href="{% url 'core:magazine-list' %}#mainText" class="text">Mağazalar səhifələri</a>
                   </li>
                   <li>
-                    <a href="../autopart-magazine-list-main/autopart-magazine-list.html#searchInput" class="text">Mağaza axrarışı</a>
+                    <a href="{% url 'core:magazine-list' %}#searchInput" class="text">Mağaza axrarışı</a>
                   </li>
                 </ul>
               </div>
@@ -96,13 +96,13 @@
       
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="../AutoPart-Contact-Page/contact.html#map" class="text">Adress</a>
+                    <a href="{% url 'core:contact' %}#map" class="text">Adress</a>
                   </li>
                   <li>
-                    <a href="../AutoPart-Contact-Page/contact.html#phone" class="text">Bizimlə əlaqə</a>
+                    <a href="{% url 'core:contact' %}#phone" class="text">Bizimlə əlaqə</a>
                   </li>
                   <li>
-                    <a href="../AutoPart-Contact-Page/contact.html#contact" class="text">Mesaj göndər</a>
+                    <a href="{% url 'core:contact' %}#contact" class="text">Mesaj göndər</a>
                   </li>
                 </ul>
               </div>
@@ -114,10 +114,10 @@
       
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="../index-result/aboutus.html#welcome" class="text">Tətbiq haqqında məlumat</a>
+                    <a href="{% url 'core:about' %}#welcome" class="text">Tətbiq haqqında məlumat</a>
                   </li>
                   <li>
-                    <a href="../index-result/aboutus.html#Driver" class="text">Faydalar</a>
+                    <a href="{% url 'core:about' %}#Driver" class="text">Faydalar</a>
                   </li>
       
                 </ul>

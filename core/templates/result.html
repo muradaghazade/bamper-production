@@ -47,12 +47,12 @@
           </nav>
           <div class="header-inner" style="padding-top: 50px; padding-bottom: 50px;">
             <h1 class="header_main_text_h1">Avtomobilini seç & Hissəni  tap</h1>
-            <p class="header_main_text_p">Qoy lazımi ehtiyat hissəsi səni tapsın!</p>
+            <p class="header_main_text_p">Ən sərfəli razılaşmanı əldə et!</p>
             <div class="search_and_select">
               <div class="header_search_input">
                 <form action="{% url 'core:result' %}"  style="display: flex; width: 100%;">
-                  <input type="search" placeholder="VIN kodunuzu daxil edin." name="vin">
-                  <button type="submit" style="border: none; background: transparent;"><svg class="search-icon svg" style="width: 18px;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>.svg{fill:#4985de !important}</style><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+                  <input type="text" placeholder="VIN kodunuzu daxil edin." name="vin" required>
+                  <button type="submit" style="border: none; background: transparent; outline: none;"><img width="25px" src="{% static 'images/lupa.png' %}" alt=""></button>
                 </form>
               </div>
               <!-- <div class="btn-container">
@@ -60,8 +60,8 @@
               </div> -->
               <div id="textContainer" class="visible mt-5">
                 <p><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff !important}</style><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></i> Asan və tez </p>
-                <p><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff !important}</style><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></i> Geniş çeşid</p>
-                <p><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff !important}</style><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></i> Uyğun ehtiyyat hissəsi</p>
+                <p><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff !important}</style><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></i> Ən münasib qiymət</p>
+                <p><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff !important}</style><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></i> Real vaxtda təkliflər</p>
             </div>
               <!-- <div id="inputContainer" class="hidden filters" >
                   <select class="filter_mark filter-item"  name="" id="">
@@ -134,7 +134,7 @@
     
 
     
-    <div class="container-fluid container ">
+    <div class="container-fluid container " style="padding: 70px; !important">
       <h2 class="title">Axtardığın ehtiyat hissəsin seç</h2>
       <form action="" method="post" enctype="multipart/form-data">
       <div class="fluid-main-container">
@@ -149,7 +149,7 @@
         <div class="file-uploader" style="display: block;">
           <!-- <input id="inp" type="file" title="none" >  -->
           {{form.image}}
-          <p style="color: #959595;">*Mütləq deyil</p>
+          <p style="color: #959595;">*Şəkil əlavə etmək mütləq deyil</p>
         </div>
       </div>
     </div>
@@ -227,19 +227,19 @@
       
                 <ul  class="list-unstyled ;mb-0">
                   <li>
-                    <a href="./index.html#header_main_text" class="text">VIN Kod</a>
+                    <a href="{% url 'core:home' %}#header_main_text" class="text">VIN Kod</a>
                   </li>
                   <li>
-                    <a href="./index.html#title" class="text">İnformasiya</a>
+                    <a href="{% url 'core:home' %}#title" class="text">İnformasiya</a>
                   </li>
                   <li>
-                    <a href="./index.html#title2" class="text">İşlətmə qaydası</a>
+                    <a href="{% url 'core:home' %}#title2" class="text">İşlətmə qaydası</a>
                   </li>
                   <li>
-                    <a href="./index.html#title3" class="text">Mağaza yarat</a>
+                    <a href="{% url 'core:home' %}#title3" class="text">Mağaza yarat</a>
                   </li>
                   <li>
-                    <a href="./index.html#title4" class="text">Bizimlə əlaqə</a>
+                    <a href="{% url 'core:home' %}#title4" class="text">Bizimlə əlaqə</a>
                   </li>
       
                   
@@ -253,10 +253,10 @@
       
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="../autopart-magazine-list-main/autopart-magazine-list.html#mainText" class="text">Mağazalar səhifələri</a>
+                    <a href="{% url 'core:magazine-list' %}#mainText" class="text">Mağazalar səhifələri</a>
                   </li>
                   <li>
-                    <a href="../autopart-magazine-list-main/autopart-magazine-list.html#searchInput" class="text">Mağaza axrarışı</a>
+                    <a href="{% url 'core:magazine-list' %}#searchInput" class="text">Mağaza axrarışı</a>
                   </li>
                 </ul>
               </div>
@@ -265,13 +265,13 @@
       
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="../AutoPart-Contact-Page/contact.html#map" class="text">Adress</a>
+                    <a href="{% url 'core:contact' %}#map" class="text">Adress</a>
                   </li>
                   <li>
-                    <a href="../AutoPart-Contact-Page/contact.html#phone" class="text">Bizimlə əlaqə</a>
+                    <a href="{% url 'core:contact' %}#phone" class="text">Bizimlə əlaqə</a>
                   </li>
                   <li>
-                    <a href="../AutoPart-Contact-Page/contact.html#contact" class="text">Mesaj göndər</a>
+                    <a href="{% url 'core:contact' %}#contact" class="text">Mesaj göndər</a>
                   </li>
                 </ul>
               </div>
@@ -283,10 +283,10 @@
       
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="../index-result/aboutus.html#welcome" class="text">Tətbiq haqqında məlumat</a>
+                    <a href="{% url 'core:about' %}#welcome" class="text">Tətbiq haqqında məlumat</a>
                   </li>
                   <li>
-                    <a href="../index-result/aboutus.html#Driver" class="text">Faydalar</a>
+                    <a href="{% url 'core:about' %}#Driver" class="text">Faydalar</a>
                   </li>
       
                 </ul>

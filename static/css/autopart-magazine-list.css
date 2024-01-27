@@ -62,10 +62,12 @@ body{
 
 
 .main-text{
+    padding: 20px;
     margin-top: 40px;
     font-size: 30px;
     text-align: center;
 }
+
 
 .main-text-search{
     max-width: 80%;
@@ -125,7 +127,7 @@ body{
 }
 
 .grid-container {
-    max-width: 80%;
+    max-width: 92%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -161,6 +163,8 @@ body{
     font-size: 10px;
     width: 200px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 .store-name {

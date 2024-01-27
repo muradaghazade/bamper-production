@@ -2,14 +2,11 @@ from django import forms
 from core.models import Order, Contact
 
 class OrderForm(forms.ModelForm):
+    title = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Ehtiyat hissəsinin adını daxil edin', 'class': 'part-input'})) 
+    phone = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Əlaqə nömrənizi daxil edin', 'class': 'part-input'})) 
     class Meta:
         model = Order
         fields = ['title', 'image', 'phone']
-
-        widgets = {
-            'title': forms.TextInput(attrs={'id': 'question', 'placeholder': 'Ehtiyat hissəsinin adını daxil edin', 'class': 'part-input'}),
-            'phone': forms.TextInput(attrs={'id': 'question', 'placeholder': 'Əlaqə nömrənizi daxil edin', 'class': 'part-input'}),
-        }
 
 class ContactForm(forms.ModelForm):
     class Meta:
@@ -30,7 +27,7 @@ class IndexContactForm(forms.ModelForm):
 
         widgets = {
             'name': forms.TextInput(attrs={'id': 'question', 'placeholder': 'Adınızı daxil edin', "class": "contact-name-input mt-4"}),
-            'phone': forms.TextInput(attrs={'id': 'question', 'placeholder': 'Nömrənizi daxil edin', "class": "contact-name-input mt-3"}),
+            'phone': forms.TextInput(attrs={'id': 'question', 'placeholder': 'Nömrənizi daxil edin', "class": "contact-name-input mt-3"},),
             'email': forms.EmailInput(attrs={'id': 'question', 'placeholder': 'E-poçt ünvanınızı daxil edin', 'class': 'contact-name-input mt-3'}),
             'message': forms.Textarea(attrs={'id': 'question', 'placeholder': 'Mesajınızı daxil edin', 'class': 'contact-name-textarea mt-3', 'style': 'padding-top: 15px;', "style": "resize: none;"}),
         }

@@ -1,4 +1,12 @@
 @media (min-width: 360px) and (max-width: 767px) {
+    .part-input {
+       margin-bottom: 20px; 
+    }
+    .container-fluid {
+        padding: 40px !important;
+        padding-bottom: 20px !important;
+        margin-top: -70px !important;
+    }
     .fluid_search_input{
         display: contents !important;
     }

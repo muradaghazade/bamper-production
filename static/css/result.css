@@ -218,6 +218,7 @@ table td span {
 }
 
 .file-uploader input {
+    width: 100%;
     height: 40px;
     background: none;
 }

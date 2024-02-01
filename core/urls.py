@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from .views import home, about, contact, magazine_list, parts_select, result, success
+from .views import home, about, contact, magazine_list, parts_select, result, success, manual
 
 app_name = 'core'
 
@@ -12,6 +12,7 @@ urlpatterns = [
     path('stores/', magazine_list, name='magazine-list'),
     path('parts-select/', parts_select, name='parts-select'),
     path('result/', result, name='result'),
+    path('manual/', manual, name='manual'),
     path('success/', success, name='success'),
 ]
 

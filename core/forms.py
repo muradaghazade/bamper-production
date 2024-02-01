@@ -8,6 +8,16 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = ['title', 'image', 'phone']
 
+class ManualForm(forms.ModelForm):
+    make = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Avtomobilinizin markasını daxil edin', 'class': 'part-input'}))
+    model = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Avtomobilinizin modelini daxil edin', 'class': 'part-input'}))
+    year = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Avtomobilinizin ilin daxil edin', 'class': 'part-input'})) 
+    title = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Ehtiyat hissəsinin adını daxil edin', 'class': 'part-input'})) 
+    phone = forms.CharField(required = True, widget=forms.TextInput(attrs={'id': 'question', 'placeholder': 'Əlaqə nömrənizi daxil edin', 'class': 'part-input'})) 
+    class Meta:
+        model = Order
+        fields = ['make', 'model', 'year' ,'title', 'image', 'phone']
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact

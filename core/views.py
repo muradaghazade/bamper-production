@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-from core.forms import OrderForm, ContactForm, IndexContactForm
+from core.forms import OrderForm, ContactForm, IndexContactForm, ManualForm
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from core.models import Store
@@ -81,9 +81,6 @@ def result(request):
             order.transmission = f'{data[6]["value"]}'
             order.fuel = f'{data[8]["value"]}'
             order.airbags = f'{data[10]["value"]}, {data[11]["value"]}, {data[12]["value"]}, {data[13]["value"]}'
-
-
-
             order.save()
             return redirect('core:success')
     else:
@@ -92,6 +89,7 @@ def result(request):
             resp = res.json()
             status = resp["Results"][4]['Value']
             data = []
+            nones = []
             if len(request.GET.get("vin")) == 17:
                 for item in resp["Results"]:
                     if item["Variable"] in variables:
@@ -99,7 +97,12 @@ def result(request):
                             'variable': item["Variable"],
                             'value':item["Value"]
                         })
-                print(data)
+                for item in data:
+                    if item["value"] == None:
+                        nones.append(item)
+                print(len(nones))
+                if len(nones) > 5:
+                    return redirect('core:manual')
                 name = f'{data[0]["value"]} {data[1]["value"]}'
                 if data[0]["value"] != None:
                     make = data[0]["value"].lower()
@@ -130,3 +133,16 @@ def result(request):
     
     return render(request, 'result.html', context)
 
+def manual(request):
+    if request.method == "POST":
+        form = ManualForm(request.POST, request.FILES)
+        if form.is_valid():
+            order = form.save()
+            order.car = f"{form.cleaned_data['make']} {form.cleaned_data['model']}"
+            order.save()
+            return redirect('core:success')
+    else:
+        context = {
+            "form": ManualForm()
+        }
+    return render(request, 'manual.html', context=context)

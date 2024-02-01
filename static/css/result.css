@@ -5,6 +5,10 @@
     /* height: 120vh; */
 }
 
+.manual-form input {
+    margin-bottom: 20px;
+}
+
 .main-grid-container {
     padding-top: 100px;
     max-width: 60%;
@@ -237,7 +241,7 @@ table td span {
 .part-input{
     height: 50px;
     width: 100%;
-    background: none;
+    background: white;
     border: none;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;

@@ -114,11 +114,12 @@ header{
     margin-top: 10px;
     width: 170px;
     border: none;
-    background: none;
+    background-color: var(--white);
+    color: var(--blue);
     font-family: 'Poppins', sans-serif;
-    color: var(--white);
     margin-bottom: 40px;
     outline: none !important;
+    border-radius: 8px; 
 }
 .btn-container {
     text-align: end;
